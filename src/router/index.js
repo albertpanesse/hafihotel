@@ -4,21 +4,22 @@ import VueRouter from 'vue-router'
 import store from '@/store'
 
 import {
-  Home,
-  ListMenuCategory, AddMenuCategory, EditMenuCategory,
-  ListMenu, AddMenu, EditMenu
+  Home, PropertySetup,
+  ListRoomCategory, AddRoomCategory, EditRoomCategory,
+  ListRoom, AddRoom, EditRoom
 } from '../views'
 
 Vue.use(VueRouter)
 
 const routes = [
   { path: '/', name: 'Home', component: Home, layout: 'default-layout' },
-  { path: '/menu-category/list', name: 'List Menu Category', component: ListMenuCategory, layout: 'default-layout' },
-  { path: '/menu-category/add', name: 'Add Menu Category', component: AddMenuCategory, layout: 'default-layout' },
-  { path: '/menu-category/edit/:id', name: 'Edit Menu Category', component: EditMenuCategory, layout: 'default-layout' },
-  { path: '/menu/list', name: 'List Menu', component: ListMenu, layout: 'default-layout' },
-  { path: '/menu/add', name: 'Add Menu', component: AddMenu, layout: 'default-layout' },
-  { path: '/menu/edit/:id', name: 'Edit Menu', component: EditMenu, layout: 'default-layout' },
+  { path: '/property-setup', name: 'Property Setup', component: PropertySetup, layout: 'default-layout' },
+  { path: '/room-category/list', name: 'List Room Category', component: ListRoomCategory, layout: 'default-layout' },
+  { path: '/room-category/add', name: 'Add Room Category', component: AddRoomCategory, layout: 'default-layout' },
+  { path: '/room-category/edit/:id', name: 'Edit Room Category', component: EditRoomCategory, layout: 'default-layout' },
+  { path: '/room/list', name: 'List Room', component: ListRoom, layout: 'default-layout' },
+  { path: '/room/add', name: 'Add Room', component: AddRoom, layout: 'default-layout' },
+  { path: '/room/edit/:id', name: 'Edit Room', component: EditRoom, layout: 'default-layout' },
 ]
 
 const router = new VueRouter({

@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import { RoomServices } from '@/services'
+import { DashServices } from '@/services'
 import { RoomActionModal } from '@/components'
 
 export default {
-  name: 'Home',
+  name: 'home',
   components: {
     RoomActionModal
   },
@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     tableOnClick: function(tableNum) {
-      RoomServices.getDetail(tableNum)
+      DashServices.detail(tableNum)
         .then(resp => {
           if (resp.data.success === true) {
             this.modalShow = true
@@ -37,7 +37,7 @@ export default {
         })
     },
     checkIn: function(dt) {
-      RoomServices.checkIn(dt)
+      DashServices.checkin(dt)
         .then(resp => {
           if (resp.data.success === true) {
             this.tables[dt.tablenum - 1] = resp.data.table
@@ -46,7 +46,7 @@ export default {
         })
     },
     checkOut: function(dt) {
-      RoomServices.checkOut(dt)
+      DashServices.checkout(dt)
         .then(resp => {
           if (resp.data.success === true) {
             this.tables[dt.tablenum - 1] = resp.data.table
@@ -59,7 +59,7 @@ export default {
     }
   },
   mounted() {
-    RoomServices.getStatuses()
+    DashServices.statuses()
       .then((resp) => {
         if (resp.data.success === true) {
           this.tables = resp.data.tables

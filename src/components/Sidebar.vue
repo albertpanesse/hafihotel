@@ -5,10 +5,13 @@
 				<router-link to="/" class="nav-link"><i class="fa fa-desktop"></i> Dashboard</router-link>
 			</li>
 			<li class="nav-item">
+				<router-link to="/property-setup" class="nav-link"><i class="fa fa-building"></i> Property Setup</router-link>
+			</li>
+			<li class="nav-item">
 				<router-link to="/room-category/list" class="nav-link"><i class="fa fa-th-large"></i> Room Categories</router-link>
 			</li>
 			<li class="nav-item">
-				<router-link to="/room/list" class="nav-link"><i class="fa fa-th-list"></i> Rooms</router-link>
+				<router-link to="/room/list" class="nav-link"><i class="fa fa-bed	"></i> Rooms</router-link>
 			</li>
 		</ul>
 	</div>
